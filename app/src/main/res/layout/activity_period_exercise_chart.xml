@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/candy_red"
+    tools:context=".activities.PeriodExerciseChartActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pieChartCardView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:cardBackgroundColor="@color/peach_2"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/combinedChartCardView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="@color/peach_2"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pieChartCardView">
+
+        <com.github.mikephil.charting.charts.CombinedChart
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/parameterSelectionInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="45dp"
+        android:hint="@string/selection"
+        app:layout_constraintStart_toStartOf="@+id/combinedChartCardView"
+        app:layout_constraintTop_toBottomOf="@+id/combinedChartCardView">
+
+        <AutoCompleteTextView
+            android:id="@+id/parameterSelectionTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoSizeMaxTextSize="25sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:padding="2dp"
+            android:textColor="@color/black"
+            tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/selectionButton2"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/show"
+        app:layout_constraintEnd_toEndOf="@+id/combinedChartCardView"
+        app:layout_constraintTop_toTopOf="@+id/parameterSelectionInputLayout2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

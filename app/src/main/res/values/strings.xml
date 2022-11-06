@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Basic Fitness Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="data">Data</string>
+    <string name="push_ups">Push Ups</string>
+    <string name="sit_ups">Sit Ups</string>
+    <string name="mountain_climbers">Mountain Climbers</string>
+    <string name="name">Name</string>
+    <string name="net_gyro">Net Gyro</string>
+    <string name="body_part_of_measure">Body part of measure</string>
+    <string name="chest_and_arms">Chest and Arms</string>
+    <string name="last_exercise_date">Last Exercise Date</string>
+    <string name="net_acceleration">Net Acceleration</string>
+    <string name="chest_stomach">Chest, Stomach</string>
+    <string name="legs">Legs</string>
+    <string name="chest">Chest</string>
+    <string name="stop">Stop</string>
+    <string name="daily_exercise_date_selection">Daily exercise date selection</string>
+    <string name="exercise_date_period_selection">Exercise date period selection</string>
+    <string name="date">Date</string>
+    <string name="date_selection">Date Selection</string>
+    <string name="show">Show</string>
+    <string name="first_date">First Date</string>
+    <string name="second_date">Second Date</string>
+    <string name="net_acceleration_in_the_x_direction">Net average acceleration in the X-direction</string>
+    <string name="net_average_gyro_in_the_z_direction">Net average gyro in the Z-direction</string>
+    <string name="net_average_gyro_in_the_y_direction">Net average gyro in the Y-direction</string>
+    <string name="net_average_gyro_in_the_x_direction">Net average gyro in the X-direction</string>
+    <string name="net_average_acceleration_in_the_z_direction">Net average acceleration in the Z-direction</string>
+    <string name="net_average_acceleration_in_the_y_direction">Net average acceleration in the Y-direction</string>
+    <string name="start_time">Start time</string>
+    <string name="delay_time">Delay Time</string>
+    <string name="plank">Plank</string>
+    <string name="selection">Selection</string>
+</resources>

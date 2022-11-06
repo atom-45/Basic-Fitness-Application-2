@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/peach_2"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/exerciseIconImageView2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:src="@drawable/push_up"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/exerciseNameTextView"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/mainBodyPartTextView"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="22dp"
+            android:gravity="start"
+            android:text="@string/body_part_of_measure"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/exerciseNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/exerciseNameTextView1" />
+
+        <TextView
+            android:id="@+id/mainBodyPartTextView1"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="@string/chest_and_arms"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/mainBodyPartTextView"
+            app:layout_constraintStart_toStartOf="@+id/mainBodyPartTextView"
+            app:layout_constraintTop_toBottomOf="@+id/mainBodyPartTextView" />
+
+        <TextView
+            android:id="@+id/exerciseNameTextView"
+            android:layout_width="85dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/exerciseIconImageView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/exerciseNameTextView1"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            app:layout_constraintStart_toStartOf="@+id/exerciseNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/exerciseNameTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

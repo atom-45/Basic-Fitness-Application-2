@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/candy_red"
+    tools:context=".activities.ExerciseDataActivity">
+
+    <TextView
+        android:id="@+id/currentDateTextView"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/daily_exercise_date_selection"
+        android:textColor="@color/black"
+        android:autoSizeMaxTextSize="25sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/currentDateCardView"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/peach_2"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/currentDateTextView"
+        app:layout_constraintStart_toStartOf="@+id/currentDateTextView"
+        app:layout_constraintTop_toBottomOf="@+id/currentDateTextView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dateDropDownTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="24dp"
+                android:hint="@string/date_selection"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/currentDateTextView2b"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dailyShowButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/show"
+                app:layout_constraintEnd_toEndOf="@+id/dateDropDownTextInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/dateDropDownTextInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/dateDropDownTextInputLayout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/weeklyDateTextView"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/exercise_date_period_selection"
+        android:textColor="@color/black"
+        android:autoSizeMaxTextSize="25sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="@+id/currentDateCardView"
+        app:layout_constraintStart_toStartOf="@+id/currentDateCardView"
+        app:layout_constraintTop_toBottomOf="@+id/currentDateCardView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/weeklyDateCardView"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="@color/peach_2"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/weeklyDateTextView"
+        app:layout_constraintStart_toStartOf="@+id/weeklyDateTextView"
+        app:layout_constraintTop_toBottomOf="@+id/weeklyDateTextView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dateSelectionOneDropDownTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="32dp"
+                android:hint="@string/first_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/dateSelectionOneTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:ignore="LabelFor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dateSelectionTwoDropDownTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="24dp"
+                android:hint="@string/second_date"
+                app:layout_constraintEnd_toEndOf="@+id/dateSelectionOneDropDownTextInputLayout"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/dateSelectionOneDropDownTextInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/dateSelectionOneDropDownTextInputLayout">
+
+                <AutoCompleteTextView
+                    android:id="@+id/dateSelectionTwoTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:ignore="LabelFor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/periodShowButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="36dp"
+                android:text="@string/show"
+                app:layout_constraintEnd_toEndOf="@+id/dateSelectionTwoDropDownTextInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/dateSelectionTwoDropDownTextInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/dateSelectionTwoDropDownTextInputLayout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

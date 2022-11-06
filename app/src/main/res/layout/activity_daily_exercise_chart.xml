@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/candy_red"
+    tools:context=".activities.DailyExerciseChartActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dailyChartCardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        app:cardBackgroundColor="@color/peach_2"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/dailyLineChart"
+                android:layout_width="match_parent"
+                android:layout_height="325dp"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/parameterSelectionInputLayout1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="220dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/selection"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dailyLineChart">
+
+                <AutoCompleteTextView
+                    android:id="@+id/parameterSelectionTextView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autoSizeMaxTextSize="25sp"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:textColor="@color/black"
+                    android:padding="2dp"
+                    tools:ignore="LabelFor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/selectionButton1"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:text="@string/show"
+                app:layout_constraintEnd_toEndOf="@+id/netAccelerationXTextView1b"
+                app:layout_constraintTop_toTopOf="@+id/parameterSelectionInputLayout1" />
+
+            <TextView
+                android:id="@+id/netAccelerationXTextView1a"
+                android:layout_width="220dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="88dp"
+                android:autoSizeMaxTextSize="25sp"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="@string/net_acceleration_in_the_x_direction"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/dailyLineChart"
+                app:layout_constraintTop_toBottomOf="@+id/dailyLineChart" />
+
+            <TextView
+                android:id="@+id/netAccelerationYTextView2a"
+                android:layout_width="220dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="@string/net_average_acceleration_in_the_y_direction"
+                android:textColor="@color/black"
+                android:autoSizeMaxTextSize="25sp"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="@+id/netAccelerationXTextView1a"
+                app:layout_constraintStart_toStartOf="@+id/netAccelerationXTextView1a"
+                app:layout_constraintTop_toBottomOf="@+id/netAccelerationXTextView1a" />
+
+            <TextView
+                android:id="@+id/netAccelerationZTextView3a"
+                android:layout_width="220dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="@string/net_average_acceleration_in_the_z_direction"
+                android:textColor="@color/black"
+                android:autoSizeMaxTextSize="25sp"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintStart_toStartOf="@+id/netAccelerationYTextView2a"
+                app:layout_constraintTop_toBottomOf="@+id/netAccelerationYTextView2a" />
+
+            <TextView
+                android:id="@+id/netGyroXTextView4a"
+                android:layout_width="220dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="11dp"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="@string/net_average_gyro_in_the_x_direction"
+                android:textColor="@color/black"
+                android:autoSizeMaxTextSize="25sp"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="@+id/netAccelerationZTextView3a"
+                app:layout_constraintStart_toStartOf="@+id/netAccelerationZTextView3a"
+                app:layout_constraintTop_toBottomOf="@+id/netAccelerationZTextView3a" />
+
+            <TextView
+                android:id="@+id/netGyroYTextView5a"
+                android:layout_width="220dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="@string/net_average_gyro_in_the_y_direction"
+                android:textColor="@color/black"
+                android:autoSizeMaxTextSize="25sp"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="@+id/netGyroXTextView4a"
+                app:layout_constraintStart_toStartOf="@+id/netGyroXTextView4a"
+                app:layout_constraintTop_toBottomOf="@+id/netGyroXTextView4a" />
+
+            <TextView
+                android:id="@+id/netGyroZTextView6a"
+                android:layout_width="220dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="@string/net_average_gyro_in_the_z_direction"
+                android:textColor="@color/black"
+                android:autoSizeMaxTextSize="25sp"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="@+id/netGyroYTextView5a"
+                app:layout_constraintStart_toStartOf="@+id/netGyroYTextView5a"
+                app:layout_constraintTop_toBottomOf="@+id/netGyroYTextView5a" />
+
+            <TextView
+                android:id="@+id/dailyStartTimeTextView"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="@string/start_time"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/netGyroZTextView6a"
+                app:layout_constraintTop_toBottomOf="@+id/netGyroZTextView6a" />
+
+            <TextView
+                android:id="@+id/dailyDelayTimeTextView"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="@string/delay_time"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/dailyStartTimeTextView"
+                app:layout_constraintStart_toStartOf="@+id/dailyStartTimeTextView"
+                app:layout_constraintTop_toBottomOf="@+id/dailyStartTimeTextView" />
+
+            <TextView
+                android:id="@+id/netAccelerationXTextView1b"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="start|center"
+                android:padding="1dp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/netAccelerationXTextView1a" />
+
+            <TextView
+                android:id="@+id/netAccelerationYTextView2b"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:padding="1dp"
+                android:gravity="start|center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/netAccelerationXTextView1b"
+                app:layout_constraintStart_toStartOf="@+id/netAccelerationXTextView1b"
+                app:layout_constraintTop_toBottomOf="@+id/netAccelerationXTextView1b" />
+
+            <TextView
+                android:id="@+id/netAccelerationZTextView3b"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:padding="1dp"
+                android:gravity="start|center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/netAccelerationYTextView2b"
+                app:layout_constraintStart_toStartOf="@+id/netAccelerationYTextView2b"
+                app:layout_constraintTop_toBottomOf="@+id/netAccelerationYTextView2b" />
+
+            <TextView
+                android:id="@+id/netGyroXTextView4b"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="11dp"
+                android:padding="1dp"
+                android:gravity="start|center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/netAccelerationZTextView3b"
+                app:layout_constraintStart_toStartOf="@+id/netAccelerationZTextView3b"
+                app:layout_constraintTop_toBottomOf="@+id/netAccelerationZTextView3b" />
+
+            <TextView
+                android:id="@+id/netGyroYTextView5b"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:gravity="start|center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/netGyroXTextView4b"
+                app:layout_constraintStart_toStartOf="@+id/netGyroXTextView4b"
+                app:layout_constraintTop_toBottomOf="@+id/netGyroXTextView4b" />
+
+            <TextView
+                android:id="@+id/netGyroZTextView6b"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:gravity="start|center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/netGyroYTextView5b"
+                app:layout_constraintStart_toStartOf="@+id/netGyroYTextView5b"
+                app:layout_constraintTop_toBottomOf="@+id/netGyroYTextView5b" />
+
+            <TextView
+                android:id="@+id/startTimeTextView1"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="start|center"
+                android:padding="1dp"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="@+id/netGyroZTextView6b"
+                app:layout_constraintStart_toStartOf="@+id/netGyroZTextView6b"
+                app:layout_constraintTop_toBottomOf="@+id/netGyroZTextView6b" />
+
+            <TextView
+                android:id="@+id/dailyDelayTimeTextView1"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:padding="1dp"
+                android:gravity="start|center"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="@+id/startTimeTextView1"
+                app:layout_constraintStart_toStartOf="@+id/startTimeTextView1"
+                app:layout_constraintTop_toBottomOf="@+id/startTimeTextView1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
